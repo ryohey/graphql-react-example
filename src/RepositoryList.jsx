@@ -17,8 +17,8 @@ export function RepositoryList() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
-  return data.search.nodes.map(({ name }) => (
-    <div key={name}>
+  return data.search.nodes.map(({ name, id }) => (
+    <div key={id}>
       <p>{name}</p>
     </div>
   ))
